@@ -1,9 +1,9 @@
-interface WeatherError {
+export interface WeatherError {
     cod: string
     message: string
 }
 
-interface WeatherReport {
+export interface WeatherData {
     coord: _Coordinates
     weather: _Weather[]
     base: string
@@ -60,4 +60,4 @@ interface _Sys {
     sunset: number
 }
 
-export type WeatherData = WeatherReport & WeatherError
+//export type WeatherData = WeatherReport & WeatherError

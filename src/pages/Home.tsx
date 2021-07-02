@@ -41,7 +41,7 @@ const Home = (props: Props) => {
         e.preventDefault()
         try {
             const result = await fetch(process.env.REACT_APP_SEARCH_ENDPOINT + location + `&appid=${process.env.REACT_APP_WEATHER_API}`)
-            if (result.ok || result.status === 404) {
+            if (result.ok) {
                 const data: WeatherData = await result.json()
                 setWeather(data)
             } else throw new Error("Failed to fetch location")
